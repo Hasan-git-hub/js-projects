@@ -6,33 +6,73 @@
     <title>btnni bosma</title>
     <style>
         body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url(/img/back-img.jpeg) no-repeat center center/cover;
+            background-attachment: fixed;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(75, 75, 75, 0.5);
+            z-index: -1;
+        }
+        .box {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 30vh;
+            height: 20vh;
             display: flex;
             align-items: center;
-            justify-content: center;
-            flex-direction: column;
+        }
+        .form {
+            width: 100%;
+            height: 100%;
+        }
+        .name, .password {
+            display: block;
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
         .btn {
-            width: 50%;
-            height: 25vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: auto;
+            padding: 10px 30px;
+            background-color: #28a745;
+            color: white;
             border: none;
-            border-radius: 16vh;
-            background: linear-gradient(135deg ,rgba(63, 63, 255, 0.678) , rgba(253, 93, 93, 0.801) , rgb(255, 255, 58));
-            font-size: 18vh;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-self: center;
+            justify-self: center;
         }
-        .btn-span {
-            color: black;
-        }
-        .btn-span-2 {
-            color: orange;
+        .btn:hover {
+            background-color: #218838;
         }
     </style>
 </head>
 <body>
-    <button onclick="click()" class="btn"><span class="btn-span">bos</span><span class="btn-span-2">ma</span></button>
+    <div class="box">
+        <form class="form">
+            <input type="text" placeholder="Username" class="name" />
+            <input type="password" placeholder="Password" class="password" />
+            <button type="submit" class="btn" onclick="click()">Login</button>
+        </form>
+    </div>
+    <noscript>js is disabled</noscript>
     <script src="/index.js"></script>
 </body>
 </html>
