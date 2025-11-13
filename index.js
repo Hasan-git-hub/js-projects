@@ -1,25 +1,39 @@
-const elform = document.querySelector('.form');
-const elusername = document.querySelector('.name');
-const elpassword = document.querySelector('.password');
-
-elform.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const user = elusername.value.trim();
-    const pass = elpassword.value.trim();
-    if (!user && !pass) {
-        alert('Please enter your username and password.');
-        return;
+const plus1 = prompt('birinchi soni kirit: ');
+const plus2 = prompt('ikkinchi soni kirit: ')
+plus = (son1 , son2) => {
+    const resalt = son1 + son2;
+    alert(`a va b sonlarni yigindisi: ${resalt}`)
+}
+plus(+plus1 , +plus2);
+const min1 = prompt('birinchi soni kirit: ');
+const min2 = prompt('ikkinchi soni kirit: ')
+minus = (son1 , son2) => {
+    const resalt = son1 - son2;
+    alert(`a va b sonlarni ayirmasi: ${resalt}`)
+}
+minus(+min1 , +min2);
+const div1 = prompt('birinchi soni kirit: ');
+const div2 = prompt('ikkinchi soni kirit: ')
+divide = (son1 , son2) => {
+    const resalt = son1 / son2;
+    alert(`a va b sonlarni bolinmasi: ${resalt}`)
+}
+divide(+div1 , +div2);
+const mul1 = prompt('birinchi soni kirit: ');
+const mul2 = prompt('ikkinchi soni kirit: ')
+multiple = (son1 , son2) => {
+    const resalt = son1 * son2;
+    alert(`a va b sonlarni kopaytmasi: ${resalt}`)
+}
+multiple(+mul1 , +mul2);
+const a = prompt('1-katet');
+const b = prompt('2-katet'); 
+const c = prompt('gipatenuza');
+pifagor = (katet1 , katet2 , gipotenuza) => {
+    if ((katet1**2) + (katet2**2) == gipotenuza**2) {
+        alert('bu pifagor teoremasiga togri keladi')
+    } else {
+        alert('bu pifagor teoremasiga togri kelmaydi')
     }
-    else if (!user) {
-        alert('Please enter your username.');
-        return;
-    }
-    else if (!pass) {
-        alert('Please enter your password.');
-        return;
-    }   
-    else {
-        alert('Login successful!');
-        window.location.href='https://restiran.vercel.app/';
-    }
-});
+}
+pifagor(+a,+b,+c)
