@@ -14,7 +14,7 @@ function submitForm() {
         window.location.href = `/pages/home.html`;
     }
 }
-window.onload = function () {
+menu = () => {
     const name = localStorage.getItem('userName');
     const date = localStorage.getItem('userDate');
     const email = localStorage.getItem('userEmail');
@@ -22,4 +22,5 @@ window.onload = function () {
     document.getElementById('profile-name').textContent = name || "no name";
     document.getElementById('profile-date').textContent = date || "no date";
     document.getElementById('profile-email').textContent = email || "no email";
-};
+}; 
+menu();
